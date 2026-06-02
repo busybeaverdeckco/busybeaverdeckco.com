@@ -1,6 +1,6 @@
-export const PHONE = "425.381.7244";
+export const PHONE = "(425) 381-7244";
 export const PHONE_HREF = "tel:+14253817244";
-export const EMAIL = "build@busybeaverdeckco.com";
+export const EMAIL = "busybeaverdeckco@gmail.com";
 
 export const CITIES = [
   "Snohomish",
@@ -88,20 +88,20 @@ export const PROCESS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Josh treated our lakefront like it was his own home. The framing alone is a work of art — and the TimberTech deck is flawless three winters in.",
-    name: "The Hollands",
-    detail: "Multi-level waterfront deck · Mercer Island",
+      "Owner was communicative and friendly. Was honest about extra work that needed to be done and didn't try to overcharge. They finished our large deck in 5 days and most importantly, it looks great.",
+    name: "Bryan M.",
+    detail: "Verified Google review",
   },
   {
     quote:
-      "Clear communication from estimate to final walk-through. No surprises, no corners cut. Easily the most professional contractor we've hired.",
-    name: "Daniel R.",
-    detail: "Covered deck & outdoor kitchen · Woodinville",
+      "Josh built us a beautiful deck and front porch that perfectly matched my vision. He is reliable, professional and friendly and a pleasure to work with.",
+    name: "Maia B.",
+    detail: "Verified Google review",
   },
   {
     quote:
-      "We interviewed four builders. Busy Beaver was the only one who talked about drainage and rot before they talked about price. Built dam good is right.",
-    name: "Priya & Sam",
-    detail: "Composite deck replacement · Kirkland",
+      "Josh and his team are master craftsmen! The finished project exceeded our expectations. You won't regret using them for your deck restoration or a new custom deck.",
+    name: "Ray E.",
+    detail: "Verified Google review",
   },
 ];

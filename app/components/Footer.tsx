@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import BrandMark from "./BrandMark";
 import { CITIES, PHONE, PHONE_HREF, EMAIL, SERVICES } from "../content";
 
@@ -12,7 +15,7 @@ export default function Footer() {
               {Array.from({ length: 6 }).map((__, j) => (
                 <span
                   key={j}
-                  className="flex items-center text-[0.7rem] font-semibold uppercase tracking-[0.4em]"
+                  className="flex items-center text-[0.7rem] font-semibold uppercase tracking-[0.2em]"
                 >
                   <span className="px-6">Built Dam Good</span>
                   <span className="text-cedar-light">▪</span>
@@ -37,12 +40,9 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Licensed", "Bonded", "Insured"].map((b) => (
-                <span
-                  key={b}
-                  className="rounded-md border border-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-bone/70"
-                >
+                <Badge key={b} variant="chip">
                   {b}
-                </span>
+                </Badge>
               ))}
             </div>
           </div>
@@ -53,11 +53,25 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 text-bone/70">
               {SERVICES.map((s) => (
                 <li key={s.title}>
-                  <a href="#services" className="link-cedar">
+                  <Link href="/#services" className="link-cedar">
                     {s.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
+            </ul>
+
+            <h3 className="eyebrow mt-8 text-cedar">Resources</h3>
+            <ul className="mt-5 space-y-3 text-bone/70">
+              <li>
+                <Link href="/blog" className="link-cedar">
+                  Deck Building Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/estimate" className="link-cedar">
+                  Free Estimate
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -67,22 +81,30 @@ export default function Footer() {
             <div className="mt-5 space-y-3">
               <a
                 href={PHONE_HREF}
-                className="block font-display text-2xl text-bone hover:text-cedar-light"
+                className="flex items-center gap-2.5 font-display text-2xl text-bone hover:text-cedar-light"
               >
+                <Phone className="h-5 w-5 text-cedar" aria-hidden />
                 {PHONE}
               </a>
-              <a href={`mailto:${EMAIL}`} className="link-cedar block text-bone/70">
+              <a
+                href={`mailto:${EMAIL}`}
+                className="link-cedar flex items-center gap-2.5 text-bone/70"
+              >
+                <Mail className="h-4 w-4 text-cedar" aria-hidden />
                 {EMAIL}
               </a>
-              <p className="text-bone/60">Snohomish, WA · Serving the Eastside</p>
+              <p className="flex items-center gap-2.5 text-bone/60">
+                <MapPin className="h-4 w-4 text-cedar" aria-hidden />
+                Snohomish, WA · Serving the Eastside
+              </p>
             </div>
 
             <h3 className="eyebrow mt-8 text-cedar">Areas Served</h3>
             <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-bone/60">
               {CITIES.map((c) => (
-                <a key={c} href="#areas" className="hover:text-bone">
+                <Link key={c} href="/#areas" className="hover:text-bone">
                   {c}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

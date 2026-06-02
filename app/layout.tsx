@@ -53,9 +53,9 @@ export const metadata: Metadata = {
       "Luxury custom decks & outdoor living for the Eastside and Snohomish County. Built Dam Good.",
     images: [
       {
-        url: "/IMG_0204.png",
-        width: 1536,
-        height: 512,
+        url: "/IMG_0204.jpg",
+        width: 1200,
+        height: 400,
         alt: "Luxury waterfront composite deck at dusk in the Pacific Northwest",
       },
     ],
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Busy Beaver Deck Co. — Pacific Northwest Custom Deck Builders",
     description:
       "Luxury custom decks & outdoor living, engineered for PNW weather. Built Dam Good.",
-    images: ["/IMG_0204.png"],
+    images: ["/IMG_0204.jpg"],
   },
   robots: { index: true, follow: true },
 };
@@ -81,8 +81,8 @@ const jsonLd = {
     "Luxury custom deck builder and outdoor living contractor serving the Eastside and Snohomish County, Washington. Composite, Trex, TimberTech/AZEK, Fiberon and wood decks.",
   url: SITE_URL,
   telephone: "+1-425-381-7244",
-  image: `${SITE_URL}/IMG_0204.png`,
-  logo: `${SITE_URL}/brand.jpg`,
+  image: `${SITE_URL}/IMG_0204.jpg`,
+  logo: `${SITE_URL}/brand_transparent.png`,
   priceRange: "$$$",
   slogan: "Built Dam Good.",
   foundingDate: "2007",
@@ -130,7 +130,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${archivo.variable} h-full`}
+      className={`dark ${display.variable} ${archivo.variable} h-full`}
     >
       <body className="grain min-h-full flex flex-col antialiased">
         <script

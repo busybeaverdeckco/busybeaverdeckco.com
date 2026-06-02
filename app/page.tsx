@@ -1,24 +1,30 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Star, ArrowDown, ArrowRight, Check, MapPin } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 import Reveal from "./components/Reveal";
 import {
   CITIES,
   SERVICES,
   PROCESS,
   TESTIMONIALS,
-  PHONE,
-  PHONE_HREF,
 } from "./content";
+import { getAllPosts } from "./blog/posts";
 
-import heroImg from "@/public/IMG_0204_hires.jpg";
-import lakeLounge from "@/public/64D34DC9-6785-4148-9C85-8D1B3540570E.png";
-import multiLevel from "@/public/IMG_0208.png";
-import nightDeck from "@/public/IMG_0209.png";
-import skylineDeck from "@/public/IMG_0210.png";
-import coveredKitchen from "@/public/IMG_0211.png";
-import homeExterior from "@/public/IMG_0212.png";
-import pergolaDeck from "@/public/IMG_0213.png";
-import ctaCollage from "@/public/A3B26245-A525-428B-ACC6-2C619E94C2BB.png";
-import brandBadge from "@/public/brand.jpg";
+import heroImg from "@/public/IMG_0204_hires.webp";
+import aboutMe from "@/public/aboutme.webp";
+import waterDeck from "@/public/6EBD2166-12E8-4E80-AAED-302F0518B08E.webp";
+import aerialFireTable from "@/public/130ADCD4-1DF7-4C4B-9D98-1F75CC140BF7.webp";
+import hillsideEstate from "@/public/71D53941-A7BE-4AD7-9DAF-C1CE089A5AAB.webp";
+import modernDeck from "@/public/6831FDE7-589A-4FEF-82A9-A996954D97A3.webp";
+import umbrellaDining from "@/public/IMG_0405.webp";
+import stairDeck from "@/public/IMG_0384.webp";
+import coveredKitchen from "@/public/IMG_0211.webp";
+import pergolaDeck from "@/public/IMG_0213.webp";
+import ctaCollage from "@/public/A3B26245-A525-428B-ACC6-2C619E94C2BB.webp";
+import brandBadge from "@/public/brand_transparent.png";
 
 function Stars({ className = "" }: { className?: string }) {
   return (
@@ -27,13 +33,15 @@ function Stars({ className = "" }: { className?: string }) {
       aria-label="5 out of 5 stars"
     >
       {Array.from({ length: 5 }).map((_, i) => (
-        <span key={i}>★</span>
+        <Star key={i} className="h-[1em] w-[1em] fill-current" strokeWidth={0} />
       ))}
     </span>
   );
 }
 
 export default function Home() {
+  const posts = getAllPosts().slice(0, 3);
+
   return (
     <>
       {/* ============================== HERO ============================== */}
@@ -80,12 +88,12 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={400} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a href="#quote" className="btn btn-flannel">
+            <Link href="/estimate" className={buttonVariants({ variant: "flannel", size: "brand" })}>
               Get a Free Estimate
-            </a>
-            <a href="#work" className="btn btn-ghost">
+            </Link>
+            <a href="#work" className={buttonVariants({ variant: "ghostBrand", size: "brand" })}>
               See Our Work
-              <span aria-hidden>↓</span>
+              <ArrowDown className="h-4 w-4" aria-hidden />
             </a>
           </Reveal>
         </div>
@@ -93,7 +101,7 @@ export default function Home() {
 
       {/* =============================== STORY =========================== */}
       <section id="story" className="relative overflow-hidden bg-stone text-evergreen">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:py-32">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-2 lg:py-32">
           <Reveal variant="left">
             <p className="eyebrow text-flannel">Meet the Builder</p>
             <h2 className="mt-5 max-w-md text-4xl text-evergreen sm:text-5xl">
@@ -118,12 +126,9 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-2">
               {["Snohomish local", "Family-owned", "Hands-on owner", "No subs hiding the work"].map(
                 (chip) => (
-                  <span
-                    key={chip}
-                    className="rounded-md border border-evergreen/20 bg-white/40 px-3.5 py-1.5 text-sm font-medium text-evergreen/80"
-                  >
+                  <Badge key={chip} variant="chipLight">
                     {chip}
-                  </span>
+                  </Badge>
                 )
               )}
             </div>
@@ -131,41 +136,39 @@ export default function Home() {
             <p className="mt-9 font-display text-2xl italic text-flannel">
               “Built Dam Good.”
             </p>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-evergreen/60">
+            <p className="mt-1 text-sm font-semibold uppercase tracking-[0.12em] text-evergreen/60">
               — Josh Wight, Owner
             </p>
           </Reveal>
 
           <Reveal variant="right" delay={120} className="relative">
             <div className="relative mx-auto max-w-md">
-              {/* Lifestyle photo */}
+              {/* Builder portrait */}
               <div className="relative aspect-[5/6] overflow-hidden rounded-xl shadow-[0_50px_90px_-40px_rgba(20,40,30,0.55)]">
                 <Image
-                  src={homeExterior}
-                  alt="Custom waterfront home with a multi-level deck in the Pacific Northwest"
+                  src={aboutMe}
+                  alt="Josh Wight, owner of Busy Beaver Deck Co., with his wife in the Pacific Northwest"
                   fill
                   sizes="(min-width: 1024px) 28rem, 90vw"
                   placeholder="blur"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
-              {/* Brand badge, pinned like a shop emblem on its natural ground */}
-              <div className="absolute -bottom-8 -left-6 w-36 -rotate-6 rounded-lg bg-[#fbf7ee] p-3 shadow-[0_30px_60px_-25px_rgba(20,40,30,0.6)] ring-1 ring-evergreen/10 sm:w-44">
-                <Image
-                  src={brandBadge}
-                  alt="Busy Beaver Deck Co. — Built Dam Good emblem"
-                  className="h-auto w-full"
-                  sizes="11rem"
-                  placeholder="blur"
-                />
-              </div>
+              {/* Transparent brand emblem, pinned like a shop sticker */}
+              <Image
+                src={brandBadge}
+                alt="Busy Beaver Deck Co. — Built Dam Good emblem"
+                className="absolute -bottom-8 -left-4 w-32 -rotate-6 object-contain drop-shadow-[0_30px_55px_rgba(20,40,30,0.55)] sm:-bottom-10 sm:-left-8 sm:w-48"
+                sizes="12rem"
+                placeholder="blur"
+              />
             </div>
           </Reveal>
         </div>
       </section>
 
       {/* ============================== SERVICES ========================= */}
-      <section id="services" className="topo relative overflow-hidden bg-bark-soft py-24 lg:py-32">
+      <section id="services" className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-cedar">What We Build</p>
@@ -186,11 +189,7 @@ export default function Home() {
                   <span className="font-display text-3xl font-semibold text-cedar/70">
                     0{i + 1}
                   </span>
-                  {s.tag && (
-                    <span className="rounded-md bg-flannel/15 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-flannel-light">
-                      {s.tag}
-                    </span>
-                  )}
+                  {s.tag && <Badge variant="tag">{s.tag}</Badge>}
                 </div>
                 <h3 className="mt-6 text-2xl text-bone">{s.title}</h3>
                 <p className="mt-3 text-pretty leading-relaxed text-bone/65">
@@ -203,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* ============================== OUR WORK ========================= */}
-      <section id="work" className="relative bg-bark py-24 lg:py-32">
+      <section id="work" className="relative bg-bark py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-cedar">Selected Work</p>
@@ -218,10 +217,12 @@ export default function Home() {
 
           <Reveal delay={120} className="mt-14 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
             {[
-              { img: lakeLounge, cap: "Lake-view lounge & fire table", city: "Bellevue" },
-              { img: multiLevel, cap: "Multi-level composite deck", city: "Sammamish" },
-              { img: nightDeck, cap: "Evening outdoor living", city: "Woodinville" },
-              { img: skylineDeck, cap: "Rooftop deck with skyline", city: "Kirkland" },
+              { img: waterDeck, cap: "Water-view deck with cable railing", city: "Sammamish" },
+              { img: aerialFireTable, cap: "Aerial deck with fire table", city: "Redmond" },
+              { img: hillsideEstate, cap: "Hillside estate deck", city: "Bellevue" },
+              { img: modernDeck, cap: "Modern low-profile deck", city: "Kirkland" },
+              { img: umbrellaDining, cap: "Backyard deck & dining", city: "Woodinville" },
+              { img: stairDeck, cap: "Multi-level deck with stairs", city: "Snohomish" },
               { img: pergolaDeck, cap: "Cable-rail deck & pergola", city: "Mercer Island" },
             ].map((tile, i) => (
               <figure
@@ -245,15 +246,15 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={160} className="mt-10">
-            <a href="#quote" className="btn btn-cedar">
+            <Link href="/estimate" className={buttonVariants({ variant: "cedar", size: "brand" })}>
               Start Your Project
-            </a>
+            </Link>
           </Reveal>
         </div>
       </section>
 
       {/* ============================== MATERIALS ======================== */}
-      <section id="materials" className="relative overflow-hidden bg-evergreen-700 py-24 lg:py-32">
+      <section id="materials" className="relative overflow-hidden bg-evergreen-700 py-20 sm:py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
           <Reveal variant="left" className="relative order-2 lg:order-1">
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-[0_50px_90px_-40px_rgba(0,0,0,0.7)]">
@@ -268,7 +269,7 @@ export default function Home() {
             </div>
             <div className="absolute -right-4 -top-4 hidden rotate-3 rounded-lg border border-cedar/40 bg-bark/90 px-5 py-4 backdrop-blur sm:block">
               <p className="font-display text-3xl text-cedar-light">25-yr</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-bone/60">
+              <p className="text-xs uppercase tracking-[0.12em] text-bone/60">
                 fade &amp; stain warranties
               </p>
             </div>
@@ -293,9 +294,7 @@ export default function Home() {
                 "Manufacturer-backed fade, stain & structural warranties on every build",
               ].map((point) => (
                 <li key={point} className="flex gap-3 text-bone/80">
-                  <span className="mt-1 text-cedar" aria-hidden>
-                    ▪
-                  </span>
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-cedar" aria-hidden />
                   <span className="text-pretty">{point}</span>
                 </li>
               ))}
@@ -305,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* =============================== PROCESS ========================= */}
-      <section id="process" className="topo relative overflow-hidden bg-bark-soft py-24 lg:py-32">
+      <section id="process" className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-cedar">How We Work</p>
@@ -335,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* ================================ AREAS ========================== */}
-      <section id="areas" className="relative overflow-hidden bg-evergreen py-24 lg:py-32">
+      <section id="areas" className="relative overflow-hidden bg-evergreen py-20 sm:py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal variant="left">
             <p className="eyebrow text-cedar">Where We Build</p>
@@ -347,30 +346,31 @@ export default function Home() {
               shows up in everything from drainage and sun exposure to the way a
               deck should sit on a lakefront lot or a forested hillside.
             </p>
-            <a href="#quote" className="btn btn-flannel mt-8">
+            <Link
+              href="/estimate"
+              className={cn(buttonVariants({ variant: "flannel", size: "brand" }), "mt-8")}
+            >
               Check Availability In Your Area
-            </a>
+            </Link>
           </Reveal>
 
           <Reveal variant="right" delay={120} className="flex flex-wrap content-start gap-3">
             {CITIES.map((c) => (
-              <a
+              <Link
                 key={c}
-                href="#quote"
+                href="/estimate"
                 className="group flex items-center gap-2 rounded-md border border-white/12 bg-white/[0.04] px-4 py-2.5 text-bone/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-cedar/50 hover:text-bone"
               >
-                <span className="text-cedar transition-transform duration-300 group-hover:scale-125" aria-hidden>
-                  ▪
-                </span>
+                <MapPin className="h-4 w-4 text-cedar transition-transform duration-300 group-hover:scale-125" aria-hidden />
                 {c}
-              </a>
+              </Link>
             ))}
           </Reveal>
         </div>
       </section>
 
       {/* ============================ TESTIMONIALS ======================= */}
-      <section id="reviews" className="relative overflow-hidden bg-stone py-24 text-evergreen lg:py-32">
+      <section id="reviews" className="relative overflow-hidden bg-stone py-20 text-evergreen sm:py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <div>
@@ -382,7 +382,7 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <Stars className="text-xl text-flannel" />
               <span className="font-display text-2xl text-evergreen">5.0</span>
-              <span className="text-evergreen/60">· 47 reviews</span>
+              <span className="text-evergreen/60">· 32 reviews</span>
             </div>
           </Reveal>
 
@@ -404,6 +404,68 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* =============================== BLOG ============================ */}
+      <section id="blog" className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <Reveal className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <p className="eyebrow text-cedar">From The Build Log</p>
+              <h2 className="mt-4 text-4xl text-bone sm:text-5xl">
+                PNW deck advice, straight from the crew.
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              className="link-cedar hidden items-center gap-2 font-semibold text-cedar-light md:inline-flex"
+            >
+              Read the blog
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Reveal>
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post, i) => (
+              <Reveal
+                key={post.slug}
+                delay={i * 80}
+                className="group flex flex-col overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] transition-all duration-500 hover:-translate-y-1.5 hover:border-cedar/40"
+              >
+                <Link href={`/blog/${post.slug}`} className="flex h-full flex-col">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt}
+                      fill
+                      sizes="(min-width:1024px) 31vw, (min-width:640px) 46vw, 92vw"
+                      placeholder="blur"
+                      className="zoom-img object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <span className="eyebrow text-cedar">{post.category}</span>
+                    <h3 className="mt-3 font-display text-xl leading-snug text-bone">
+                      {post.title}
+                    </h3>
+                    <p className="mt-3 flex-1 text-pretty text-sm leading-relaxed text-bone/60">
+                      {post.excerpt}
+                    </p>
+                    <span className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-cedar-light">
+                      {post.readMin} min read
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={160} className="mt-10 md:hidden">
+            <Link href="/blog" className={buttonVariants({ variant: "cedar", size: "brand" })}>
+              Read the Blog
+            </Link>
+          </Reveal>
         </div>
       </section>
 
@@ -437,10 +499,16 @@ export default function Home() {
             No high-pressure sales — just a real plan from the builder himself.
           </Reveal>
           <Reveal delay={340} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a href={PHONE_HREF} className="btn btn-flannel text-base">
-              Call {PHONE}
-            </a>
-            <a href="#story" className="btn btn-ghost text-base">
+            <Link
+              href="/estimate"
+              className={cn(buttonVariants({ variant: "flannel", size: "brand" }), "text-base")}
+            >
+              Request Your Estimate
+            </Link>
+            <a
+              href="#story"
+              className={cn(buttonVariants({ variant: "ghostBrand", size: "brand" }), "text-base")}
+            >
               Meet the Builder
             </a>
           </Reveal>

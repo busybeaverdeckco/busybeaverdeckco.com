@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 /* ============================================================
    BUSY BEAVER DECK CO. — "Pacific Northwest Premium Craft"
@@ -80,6 +84,12 @@
   a {
     -webkit-tap-highlight-color: transparent;
   }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
 
 /* -------------------------------------------------- components */
@@ -89,7 +99,7 @@
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 0.72rem;
-    letter-spacing: 0.34em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 
@@ -97,64 +107,6 @@
     font-size: clamp(2.6rem, 7.5vw, 6.3rem);
     line-height: 0.98;
     letter-spacing: -0.01em;
-  }
-
-  /* Cedar pill — primary CTA */
-  .btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    font-family: var(--font-body);
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-size: 0.82rem;
-    border-radius: 0.4rem;
-    padding: 1rem 1.8rem;
-    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
-      box-shadow 0.35s ease, background-color 0.35s ease, color 0.35s ease,
-      border-color 0.35s ease;
-    will-change: transform;
-  }
-  .btn:active { transform: translateY(1px) scale(0.99); }
-
-  .btn-flannel {
-    background: var(--color-flannel);
-    color: var(--color-bone);
-    box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.7),
-      inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  }
-  .btn-flannel:hover {
-    transform: translateY(-2px);
-    background: var(--color-flannel-light);
-    box-shadow: 0 16px 30px -16px rgba(0, 0, 0, 0.8),
-      inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  }
-
-  .btn-ghost {
-    color: var(--color-bone);
-    border: 1.5px solid color-mix(in srgb, var(--color-bone) 38%, transparent);
-    background: color-mix(in srgb, var(--color-bone) 4%, transparent);
-    backdrop-filter: blur(6px);
-  }
-  .btn-ghost:hover {
-    border-color: var(--color-cedar);
-    color: var(--color-cedar-light);
-    transform: translateY(-2px);
-  }
-
-  .btn-cedar {
-    background: var(--color-cedar);
-    color: #211608;
-    box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.65),
-      inset 0 1px 0 rgba(255, 255, 255, 0.22);
-  }
-  .btn-cedar:hover {
-    transform: translateY(-2px);
-    background: var(--color-cedar-light);
-    box-shadow: 0 16px 30px -16px rgba(0, 0, 0, 0.75);
   }
 
   /* Animated cedar underline on text links */
@@ -264,3 +216,49 @@
 /* Image hover-zoom helper */
 .zoom-img { transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1); }
 .group:hover .zoom-img { transform: scale(1.07); }
+
+/* shadcn semantic tokens → mapped onto the Busy Beaver palette so every
+   shadcn primitive renders on-brand with no neutral "default" styling. */
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-display);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: var(--color-bark);
+  --foreground: var(--color-bone);
+  --card: var(--color-bark-soft);
+  --card-foreground: var(--color-bone);
+  --popover: var(--color-evergreen);
+  --popover-foreground: var(--color-bone);
+  --primary: var(--color-cedar);
+  --primary-foreground: var(--color-bark);
+  --secondary: var(--color-evergreen-700);
+  --secondary-foreground: var(--color-bone);
+  --muted: var(--color-bark-soft);
+  --muted-foreground: var(--color-bone-mute);
+  --accent: var(--color-evergreen-700);
+  --accent-foreground: var(--color-bone);
+  --destructive: var(--color-flannel);
+  --border: color-mix(in srgb, var(--color-bone) 12%, transparent);
+  --input: color-mix(in srgb, var(--color-bone) 15%, transparent);
+  --ring: var(--color-cedar);
+}
