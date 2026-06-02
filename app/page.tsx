@@ -105,21 +105,51 @@ export default function Home() {
           <Reveal variant="left">
             <p className="eyebrow text-flannel">Meet the Builder</p>
             <h2 className="mt-5 max-w-md text-4xl text-evergreen sm:text-5xl">
-              You work directly with Josh — not a salesman.
+              You work directly with me — not a salesman.
             </h2>
             <div className="mt-7 space-y-5 text-pretty text-lg leading-relaxed text-evergreen/75">
               <p>
-                Busy Beaver Deck Co. is led personally by Josh Wight, a Pacific
-                Northwest native with nearly 20 years building high-end outdoor
-                spaces. Every project is approached with the mindset,
-                professionalism, and execution standards of a premier luxury
-                builder.
+                Hi, I&apos;m Joshua Wight, owner of Busy Beaver Deck Co. Born and
+                raised on the Eastside of Lake Washington, I&apos;ve spent nearly
+                two decades helping homeowners create beautiful outdoor living
+                spaces throughout the Greater Seattle area.
               </p>
               <p>
-                A devoted husband of more than a decade and father of two, Josh
-                lives in Snohomish and works in the same communities he serves.
-                That means clear communication, an organized site, clean
-                execution, and a deck he&apos;d be proud to put his own name on.
+                As a husband, father of two, and local business owner, I
+                understand the importance of building things the right way. Every
+                project we take on gets the same care, craftsmanship, and
+                attention to detail I&apos;d expect at my own home.
+              </p>
+              <p>
+                Formerly known as PNW Deck Pros, our company was built on a simple
+                philosophy: outstanding workmanship, honest communication, fair
+                pricing, and a finished product homeowners are proud to show off
+                for years to come.
+              </p>
+              <p>
+                We specialize in custom and standard deck construction — composite,
+                hardwood, and cedar decks, railings, covered structures, and
+                complete outdoor living spaces — working with industry-leading
+                products from Trex, TimberTech/AZEK, Fiberon, FastenMaster, CAMO,
+                and Simpson Strong-Tie.
+              </p>
+              <p>
+                Our reputation has been built through hard work, word-of-mouth
+                referrals, and five-star service from start to finish. We show up
+                when we say we will, keep job sites clean, communicate clearly, and
+                stand behind our work.
+              </p>
+              <p>
+                Today we proudly serve homeowners throughout Snohomish, Lake
+                Stevens, Monroe, Mill Creek, Woodinville, Maltby, Kirkland,
+                Bellevue, Mercer Island, Redmond, Issaquah, Sammamish, Bothell,
+                Kenmore, and Lake Forest Park.
+              </p>
+              <p>
+                When you hire Busy Beaver Deck Co., you&apos;re not hiring a
+                salesman. You&apos;re hiring a local contractor with nearly 20
+                years of hands-on experience who genuinely cares about the quality
+                of the finished product.
               </p>
             </div>
 
