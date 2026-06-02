@@ -247,10 +247,10 @@ export default function Home() {
 
           <Reveal delay={120} className="mt-14 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
             {[
-              { img: waterDeck, cap: "Water-view deck with cable railing", city: "Sammamish" },
-              { img: aerialFireTable, cap: "Aerial deck with fire table", city: "Redmond" },
-              { img: hillsideEstate, cap: "Hillside estate deck", city: "Bellevue" },
-              { img: modernDeck, cap: "Modern low-profile deck", city: "Kirkland" },
+              { img: waterDeck, cap: "Water-view deck with cable railing", city: "Mukilteo, WA" },
+              { img: aerialFireTable, cap: "Aerial deck with fire table", city: "Blackman Lake, Snohomish, WA" },
+              { img: hillsideEstate, cap: "Lakefront estate deck", city: "Blackman Lake, Snohomish, WA" },
+              { img: modernDeck, cap: "Modern low-profile deck", city: "Sahalee Country Club, Sammamish, WA" },
               { img: umbrellaDining, cap: "Backyard deck & dining", city: "Woodinville" },
               { img: stairDeck, cap: "Multi-level deck with stairs", city: "Snohomish" },
               { img: pergolaDeck, cap: "Cable-rail deck & pergola", city: "Mercer Island" },
