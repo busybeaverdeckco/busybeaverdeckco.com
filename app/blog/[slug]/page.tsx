@@ -215,7 +215,7 @@ export default async function BlogPostPage({
             Thinking about a deck? Let&apos;s talk.
           </h2>
           <p className="mt-4 max-w-xl text-pretty text-lg leading-relaxed text-bone/75">
-            You meet Josh — not a salesman. Tell us about your space and get an
+            You meet Josh. Tell us about your space and get an
             honest, itemized estimate for a deck built dam good for the Pacific
             Northwest.
           </p>

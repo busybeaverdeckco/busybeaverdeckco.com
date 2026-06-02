@@ -66,7 +66,7 @@ export const PROCESS = [
   {
     no: "01",
     title: "Sit-Down & Design",
-    body: "You meet Josh — not a salesman. We walk the space, talk through how you live outside, and shape a design with real drawings and an honest, itemized estimate.",
+    body: "You meet Josh. We walk the space, talk through how you live outside, and shape a design with real drawings and an honest, itemized estimate.",
   },
   {
     no: "02",

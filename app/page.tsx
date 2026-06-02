@@ -308,7 +308,7 @@ export default function Home() {
           <Reveal variant="right" delay={120} className="order-1 lg:order-2">
             <p className="eyebrow text-cedar">Built For The Rain</p>
             <h2 className="mt-4 text-4xl text-bone sm:text-5xl">
-              Premium materials. PNW engineering.
+              Premium materials.
             </h2>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-bone/70">
               Our climate punishes a cheap deck. We build with the industry&apos;s
