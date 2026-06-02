@@ -27,9 +27,9 @@ export const SERVICES = [
     tag: "Most requested",
   },
   {
-    title: "Covered Decks",
+    title: "Deck Replacement & Remodels",
     blurb:
-      "Roof structures, louvered covers & dry-below systems so you live outside year-round.",
+      "Tear-outs, resurfacing & rebuilds that bring tired decks back to life — done right.",
   },
   {
     title: "Custom Outdoor Living",
@@ -37,19 +37,19 @@ export const SERVICES = [
       "Outdoor kitchens, fireplaces, fire tables, lounges — full backyard environments.",
   },
   {
+    title: "Covered Decks",
+    blurb:
+      "Roof structures, louvered covers & dry-below systems so you live outside year-round.",
+  },
+  {
     title: "Multi-Level & Waterfront",
     blurb:
-      "Hillside, lakefront & multi-tier builds with structurally superior framing.",
+      "Hillside, lakefront & multi-tier builds with structurally superior framing with structures engineered to withstand our PNW environment.",
   },
   {
     title: "Railings & Deck Lighting",
     blurb:
       "Cable, glass & aluminum railings paired with low-voltage architectural lighting.",
-  },
-  {
-    title: "Deck Replacement & Remodels",
-    blurb:
-      "Tear-outs, resurfacing & rebuilds that bring tired decks back to life — done right.",
   },
 ];
 
