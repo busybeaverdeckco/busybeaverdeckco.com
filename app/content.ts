@@ -66,12 +66,12 @@ export const PROCESS = [
   {
     no: "01",
     title: "Sit-Down & Design",
-    body: "You meet Josh. We walk the space, talk through how you live outside, and shape a design with real drawings and an honest, itemized estimate.",
+    body: "You meet Josh. We walk through the space, talk through the scope of work, and shape a design with real drawings and an honest, itemized estimate.",
   },
   {
     no: "02",
     title: "Engineering & Permits",
-    body: "We handle structural details, permits and inspections. Framing is over-built with Simpson Strong-Tie hardware so the bones outlast the boards.",
+    body: "We handle structural details, site plans, and the engineering process, and work closely with architects to keep everything moving smoothly.",
   },
   {
     no: "03",
@@ -81,7 +81,7 @@ export const PROCESS = [
   {
     no: "04",
     title: "The Reveal",
-    body: "We walk the finished deck together, hand over warranty paperwork, and leave you with an outdoor space built to be enjoyed for generations.",
+    body: "We walk through the finished deck project together, talking over key details and reflecting on the vision from day one — making sure we accomplished exactly what you wanted throughout the entire process, and leave you with an outdoor space built to be enjoyed for generations.",
   },
 ];
 

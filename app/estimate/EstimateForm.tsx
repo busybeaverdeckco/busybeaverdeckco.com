@@ -161,7 +161,7 @@ export default function EstimateForm() {
       <div className="space-y-12 px-6 py-10 sm:px-9 sm:py-12">
         {/* 01 — Contact */}
         <fieldset className="space-y-7">
-          <SectionHead no="01" title="Who's building?" />
+          <SectionHead no="01" title="Customer information" />
           <div className="grid gap-7 sm:grid-cols-2">
             <Line id="name" label="Full name" placeholder="Jane Doe" autoComplete="name" />
             <Line id="email" label="Email" type="email" placeholder="you@email.com" autoComplete="email" />

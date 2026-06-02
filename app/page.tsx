@@ -318,7 +318,7 @@ export default function Home() {
 
             <ul className="mt-8 space-y-4">
               {[
-                "Trex, TimberTech/AZEK & Fiberon capped composite — no rot, no splinters, minimal upkeep",
+                "Trex, TimberTech/AZEK & Fiberon composite — no rot, no splinters, minimal upkeep",
                 "Structurally superior framing with Simpson Strong-Tie hardware & proper drainage",
                 "Hidden fasteners, crisp picture-frame borders & clean, intentional detailing",
                 "Manufacturer-backed fade, stain & structural warranties on every build",
