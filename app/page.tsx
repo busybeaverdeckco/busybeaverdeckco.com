@@ -312,7 +312,7 @@ export default function Home() {
             </h2>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-bone/70">
               Our climate punishes a cheap deck. We build with the industry&apos;s
-              best composite systems and over-build the structure underneath, so
+              best composite products and go above and beyond building our structures, so
               your investment looks and performs for decades.
             </p>
 
