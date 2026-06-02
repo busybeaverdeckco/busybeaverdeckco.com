@@ -27,7 +27,7 @@ export const SERVICES = [
     tag: "Most requested",
   },
   {
-    title: "Covered Decks & Pavilions",
+    title: "Covered Decks",
     blurb:
       "Roof structures, louvered covers & dry-below systems so you live outside year-round.",
   },
