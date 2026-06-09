@@ -21,8 +21,8 @@ import hillsideEstate from "@/public/71D53941-A7BE-4AD7-9DAF-C1CE089A5AAB.webp";
 import modernDeck from "@/public/6831FDE7-589A-4FEF-82A9-A996954D97A3.webp";
 import umbrellaDining from "@/public/IMG_0405.webp";
 import stairDeck from "@/public/IMG_0384.webp";
-import coveredKitchen from "@/public/IMG_0211.webp";
-import pergolaDeck from "@/public/IMG_0213.webp";
+import coveredKitchen from "@/public/1CD8043E-EEF8-4CBE-B3F0-58A0D4A52F7F.png";
+import pergolaDeck from "@/public/7B65F9FE-0785-43B0-AD39-42ABDC5D4E2B.png";
 import ctaCollage from "@/public/A3B26245-A525-428B-ACC6-2C619E94C2BB.webp";
 import brandBadge from "@/public/brand_transparent.png";
 
