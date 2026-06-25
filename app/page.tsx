@@ -1,37 +1,28 @@
+import { ArrowDown, ArrowRight, Check, MapPin, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Star, ArrowDown, ArrowRight, Check, MapPin } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Reveal from "./components/Reveal";
-import {
-  CITIES,
-  SERVICES,
-  PROCESS,
-  TESTIMONIALS,
-} from "./content";
-import { getAllPosts } from "./blog/posts";
-
-import heroImg from "@/public/IMG_0204_hires.webp";
-import aboutMe from "@/public/aboutme.webp";
-import waterDeck from "@/public/6EBD2166-12E8-4E80-AAED-302F0518B08E.webp";
-import aerialFireTable from "@/public/130ADCD4-1DF7-4C4B-9D98-1F75CC140BF7.webp";
-import hillsideEstate from "@/public/71D53941-A7BE-4AD7-9DAF-C1CE089A5AAB.webp";
-import modernDeck from "@/public/6831FDE7-589A-4FEF-82A9-A996954D97A3.webp";
-import umbrellaDining from "@/public/IMG_0405.webp";
-import stairDeck from "@/public/IMG_0384.webp";
 import coveredKitchen from "@/public/1CD8043E-EEF8-4CBE-B3F0-58A0D4A52F7F.png";
+import waterDeck from "@/public/6EBD2166-12E8-4E80-AAED-302F0518B08E.webp";
 import pergolaDeck from "@/public/7B65F9FE-0785-43B0-AD39-42ABDC5D4E2B.png";
+import hillsideEstate from "@/public/71D53941-A7BE-4AD7-9DAF-C1CE089A5AAB.webp";
+import aerialFireTable from "@/public/130ADCD4-1DF7-4C4B-9D98-1F75CC140BF7.webp";
+import modernDeck from "@/public/6831FDE7-589A-4FEF-82A9-A996954D97A3.webp";
 import ctaCollage from "@/public/A3B26245-A525-428B-ACC6-2C619E94C2BB.webp";
+import aboutMe from "@/public/aboutme.png";
 import brandBadge from "@/public/brand_transparent.png";
+import heroImg from "@/public/IMG_0204_hires.webp";
+import stairDeck from "@/public/IMG_0384.webp";
+import umbrellaDining from "@/public/IMG_0405.webp";
+import { getAllPosts } from "./blog/posts";
+import Reveal from "./components/Reveal";
+import { CITIES, PROCESS, SERVICES, TESTIMONIALS } from "./content";
 
 function Stars({ className = "" }: { className?: string }) {
   return (
-    <span
-      className={`inline-flex gap-0.5 text-cedar ${className}`}
-      aria-label="5 out of 5 stars"
-    >
+    <span className={`inline-flex gap-0.5 text-cedar ${className}`} aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className="h-[1em] w-[1em] fill-current" strokeWidth={0} />
       ))}
@@ -82,13 +73,15 @@ export default function Home() {
             delay={260}
             className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-bone/80"
           >
-            Custom composite, Trex, TimberTech/AZEK, Fiberon &amp; wood decks for
-            the Eastside and Snohomish County — engineered to outlast the rain
-            and look stunning doing it.
+            Custom composite, Trex, TimberTech/AZEK, Fiberon &amp; wood decks for the Eastside and
+            Snohomish County — engineered to outlast the rain and look stunning doing it.
           </Reveal>
 
           <Reveal delay={400} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link href="/estimate" className={buttonVariants({ variant: "flannel", size: "brand" })}>
+            <Link
+              href="/estimate"
+              className={buttonVariants({ variant: "flannel", size: "brand" })}
+            >
               Get a Free Estimate
             </Link>
             <a href="#work" className={buttonVariants({ variant: "ghostBrand", size: "brand" })}>
@@ -109,47 +102,40 @@ export default function Home() {
             </h2>
             <div className="mt-7 space-y-5 text-pretty text-lg leading-relaxed text-evergreen/75">
               <p>
-                Hi, I&apos;m Joshua Wight, owner of Busy Beaver Deck Co. Born and
-                raised on the Eastside of Lake Washington, I&apos;ve spent nearly
-                two decades helping homeowners create beautiful outdoor living
-                spaces throughout the Greater Seattle area.
+                Hi, I&apos;m Joshua Wight, owner of Busy Beaver Deck Co. Born and raised on the
+                Eastside of Lake Washington, I&apos;ve spent nearly two decades helping homeowners
+                create beautiful outdoor living spaces throughout the Greater Seattle area.
               </p>
               <p>
-                As a husband, father of two, and local business owner, I
-                understand the importance of building things the right way. Every
-                project we take on gets the same care, craftsmanship, and
-                attention to detail I&apos;d expect at my own home.
+                As a husband, father of two, and local business owner, I understand the importance
+                of building things the right way. Every project we take on gets the same care,
+                craftsmanship, and attention to detail I&apos;d expect at my own home.
               </p>
               <p>
-                Formerly known as PNW Deck Pros, our company was built on a simple
-                philosophy: outstanding workmanship, honest communication, fair
-                pricing, and a finished product homeowners are proud to show off
-                for years to come.
+                Formerly known as PNW Deck Pros, our company was built on a simple philosophy:
+                outstanding workmanship, honest communication, fair pricing, and a finished product
+                homeowners are proud to show off for years to come.
               </p>
               <p>
-                We specialize in custom and standard deck construction — composite,
-                hardwood, and cedar decks, railings, covered structures, and
-                complete outdoor living spaces — working with industry-leading
-                products from Trex, TimberTech/AZEK, Fiberon, FastenMaster, CAMO,
-                and Simpson Strong-Tie.
+                We specialize in custom and standard deck construction — composite, hardwood, and
+                cedar decks, railings, covered structures, and complete outdoor living spaces —
+                working with industry-leading products from Trex, TimberTech/AZEK, Fiberon,
+                FastenMaster, CAMO, and Simpson Strong-Tie.
               </p>
               <p>
-                Our reputation has been built through hard work, word-of-mouth
-                referrals, and five-star service from start to finish. We show up
-                when we say we will, keep job sites clean, communicate clearly, and
-                stand behind our work.
+                Our reputation has been built through hard work, word-of-mouth referrals, and
+                five-star service from start to finish. We show up when we say we will, keep job
+                sites clean, communicate clearly, and stand behind our work.
               </p>
               <p>
-                Today we proudly serve homeowners throughout Snohomish, Lake
-                Stevens, Monroe, Mill Creek, Woodinville, Maltby, Kirkland,
-                Bellevue, Mercer Island, Redmond, Issaquah, Sammamish, Bothell,
-                Kenmore, and Lake Forest Park.
+                Today we proudly serve homeowners throughout Snohomish, Lake Stevens, Monroe, Mill
+                Creek, Woodinville, Maltby, Kirkland, Bellevue, Mercer Island, Redmond, Issaquah,
+                Sammamish, Bothell, Kenmore, and Lake Forest Park.
               </p>
               <p>
-                When you hire Busy Beaver Deck Co., you&apos;re not hiring a
-                salesman. You&apos;re hiring a local contractor with nearly 20
-                years of hands-on experience who genuinely cares about the quality
-                of the finished product.
+                When you hire Busy Beaver Deck Co., you&apos;re not hiring a salesman. You&apos;re
+                hiring a local contractor with nearly 20 years of hands-on experience who genuinely
+                cares about the quality of the finished product.
               </p>
             </div>
 
@@ -159,13 +145,11 @@ export default function Home() {
                   <Badge key={chip} variant="chipLight">
                     {chip}
                   </Badge>
-                )
+                ),
               )}
             </div>
 
-            <p className="mt-9 font-display text-2xl italic text-flannel">
-              “Built Dam Good.”
-            </p>
+            <p className="mt-9 font-display text-2xl italic text-flannel">“Built Dam Good.”</p>
             <p className="mt-1 text-sm font-semibold uppercase tracking-[0.12em] text-evergreen/60">
               — Josh Wight, Owner
             </p>
@@ -198,7 +182,10 @@ export default function Home() {
       </section>
 
       {/* ============================== SERVICES ========================= */}
-      <section id="services" className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32">
+      <section
+        id="services"
+        className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32"
+      >
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-cedar">What We Build</p>
@@ -222,9 +209,7 @@ export default function Home() {
                   {s.tag && <Badge variant="tag">{s.tag}</Badge>}
                 </div>
                 <h3 className="mt-6 text-2xl text-bone">{s.title}</h3>
-                <p className="mt-3 text-pretty leading-relaxed text-bone/65">
-                  {s.blurb}
-                </p>
+                <p className="mt-3 text-pretty leading-relaxed text-bone/65">{s.blurb}</p>
               </Reveal>
             ))}
           </div>
@@ -236,21 +221,34 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-cedar">Selected Work</p>
-            <h2 className="mt-4 text-4xl text-bone sm:text-5xl">
-              Decks that earn the view.
-            </h2>
+            <h2 className="mt-4 text-4xl text-bone sm:text-5xl">Decks that earn the view.</h2>
             <p className="mt-5 text-pretty text-lg text-bone/65">
-              A look at recent builds across the Eastside and Snohomish County —
-              composite, covered, multi-level and waterfront.
+              A look at recent builds across the Eastside and Snohomish County — composite, covered,
+              multi-level and waterfront.
             </p>
           </Reveal>
 
-          <Reveal delay={120} className="mt-14 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
+          <Reveal
+            delay={120}
+            className="mt-14 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5"
+          >
             {[
               { img: waterDeck, cap: "Water-view deck with cable railing", city: "Mukilteo" },
-              { img: aerialFireTable, cap: "Aerial deck with fire table", city: "Blackman Lake, Snohomish" },
-              { img: hillsideEstate, cap: "Lakefront estate deck", city: "Blackman Lake, Snohomish" },
-              { img: modernDeck, cap: "Modern low-profile deck", city: "Sahalee Country Club, Sammamish" },
+              {
+                img: aerialFireTable,
+                cap: "Aerial deck with fire table",
+                city: "Blackman Lake, Snohomish",
+              },
+              {
+                img: hillsideEstate,
+                cap: "Lakefront estate deck",
+                city: "Blackman Lake, Snohomish",
+              },
+              {
+                img: modernDeck,
+                cap: "Modern low-profile deck",
+                city: "Sahalee Country Club, Sammamish",
+              },
               { img: umbrellaDining, cap: "Backyard deck & dining", city: "Woodinville" },
               { img: stairDeck, cap: "Multi-level deck with stairs", city: "Snohomish" },
               { img: pergolaDeck, cap: "Cable-rail deck & pergola", city: "Mercer Island" },
@@ -284,7 +282,10 @@ export default function Home() {
       </section>
 
       {/* ============================== MATERIALS ======================== */}
-      <section id="materials" className="relative overflow-hidden bg-evergreen-700 py-20 sm:py-24 lg:py-32">
+      <section
+        id="materials"
+        className="relative overflow-hidden bg-evergreen-700 py-20 sm:py-24 lg:py-32"
+      >
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
           <Reveal variant="left" className="relative order-2 lg:order-1">
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-[0_50px_90px_-40px_rgba(0,0,0,0.7)]">
@@ -307,13 +308,11 @@ export default function Home() {
 
           <Reveal variant="right" delay={120} className="order-1 lg:order-2">
             <p className="eyebrow text-cedar">Built For The Rain</p>
-            <h2 className="mt-4 text-4xl text-bone sm:text-5xl">
-              Premium materials.
-            </h2>
+            <h2 className="mt-4 text-4xl text-bone sm:text-5xl">Premium materials.</h2>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-bone/70">
-              Our climate punishes a cheap deck. We build with the industry&apos;s
-              best composite products and go above and beyond building our structures, so
-              your investment looks and performs for decades.
+              Our climate punishes a cheap deck. We build with the industry&apos;s best composite
+              products and go above and beyond building our structures, so your investment looks and
+              performs for decades.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -334,13 +333,14 @@ export default function Home() {
       </section>
 
       {/* =============================== PROCESS ========================= */}
-      <section id="process" className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32">
+      <section
+        id="process"
+        className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32"
+      >
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-cedar">How We Work</p>
-            <h2 className="mt-4 text-4xl text-bone sm:text-5xl">
-              Four steps. Zero surprises.
-            </h2>
+            <h2 className="mt-4 text-4xl text-bone sm:text-5xl">Four steps. Zero surprises.</h2>
           </Reveal>
 
           <div className="mt-16 grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
@@ -354,9 +354,7 @@ export default function Home() {
                   {step.no}
                 </span>
                 <h3 className="mt-4 text-2xl text-bone">{step.title}</h3>
-                <p className="mt-3 text-pretty leading-relaxed text-bone/65">
-                  {step.body}
-                </p>
+                <p className="mt-3 text-pretty leading-relaxed text-bone/65">{step.body}</p>
               </Reveal>
             ))}
           </div>
@@ -372,9 +370,9 @@ export default function Home() {
               Proudly local to the Eastside &amp; Snohomish County.
             </h2>
             <p className="mt-6 text-pretty text-lg leading-relaxed text-bone/70">
-              We don&apos;t just work here — we live here. That local knowledge
-              shows up in everything from drainage and sun exposure to the way a
-              deck should sit on a lakefront lot or a forested hillside.
+              We don&apos;t just work here — we live here. That local knowledge shows up in
+              everything from drainage and sun exposure to the way a deck should sit on a lakefront
+              lot or a forested hillside.
             </p>
             <Link
               href="/estimate"
@@ -391,7 +389,10 @@ export default function Home() {
                 href="/estimate"
                 className="group flex items-center gap-2 rounded-md border border-white/12 bg-white/[0.04] px-4 py-2.5 text-bone/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-cedar/50 hover:text-bone"
               >
-                <MapPin className="h-4 w-4 text-cedar transition-transform duration-300 group-hover:scale-125" aria-hidden />
+                <MapPin
+                  className="h-4 w-4 text-cedar transition-transform duration-300 group-hover:scale-125"
+                  aria-hidden
+                />
                 {c}
               </Link>
             ))}
@@ -400,7 +401,10 @@ export default function Home() {
       </section>
 
       {/* ============================ TESTIMONIALS ======================= */}
-      <section id="reviews" className="relative overflow-hidden bg-stone py-20 text-evergreen sm:py-24 lg:py-32">
+      <section
+        id="reviews"
+        className="relative overflow-hidden bg-stone py-20 text-evergreen sm:py-24 lg:py-32"
+      >
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <div>
@@ -438,7 +442,10 @@ export default function Home() {
       </section>
 
       {/* =============================== BLOG ============================ */}
-      <section id="blog" className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32">
+      <section
+        id="blog"
+        className="topo relative overflow-hidden bg-bark-soft py-20 sm:py-24 lg:py-32"
+      >
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
@@ -524,11 +531,18 @@ export default function Home() {
               <span className="font-semibold italic text-cedar-light">dam good.</span>
             </span>
           </Reveal>
-          <Reveal as="p" delay={220} className="mx-auto mt-7 max-w-xl text-pretty text-lg text-bone/80">
-            Tell Josh about your space and get an honest, itemized estimate.
-            No high-pressure sales — just a real plan from the builder himself.
+          <Reveal
+            as="p"
+            delay={220}
+            className="mx-auto mt-7 max-w-xl text-pretty text-lg text-bone/80"
+          >
+            Tell Josh about your space and get an honest, itemized estimate. No high-pressure sales
+            — just a real plan from the builder himself.
           </Reveal>
-          <Reveal delay={340} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Reveal
+            delay={340}
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          >
             <Link
               href="/estimate"
               className={cn(buttonVariants({ variant: "flannel", size: "brand" }), "text-base")}
