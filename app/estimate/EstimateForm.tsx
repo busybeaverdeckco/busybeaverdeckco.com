@@ -189,8 +189,8 @@ export default function EstimateForm() {
               </SelectTrigger>
               <SelectContent>
                 {CITIES.map((c) => (
-                  <SelectItem key={c} value={c}>
-                    {c}
+                  <SelectItem key={c.slug} value={c.name}>
+                    {c.name}
                   </SelectItem>
                 ))}
                 <SelectItem value="Other / nearby PNW">Other / nearby</SelectItem>

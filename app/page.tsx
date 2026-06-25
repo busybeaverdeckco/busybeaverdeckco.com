@@ -385,15 +385,15 @@ export default function Home() {
           <Reveal variant="right" delay={120} className="flex flex-wrap content-start gap-3">
             {CITIES.map((c) => (
               <Link
-                key={c}
-                href="/estimate"
+                key={c.slug}
+                href={`/deck-builder/${c.slug}`}
                 className="group flex items-center gap-2 rounded-md border border-white/12 bg-white/[0.04] px-4 py-2.5 text-bone/80 transition-all duration-300 hover:-translate-y-0.5 hover:border-cedar/50 hover:text-bone"
               >
                 <MapPin
                   className="h-4 w-4 text-cedar transition-transform duration-300 group-hover:scale-125"
                   aria-hidden
                 />
-                {c}
+                {c.name}
               </Link>
             ))}
           </Reveal>

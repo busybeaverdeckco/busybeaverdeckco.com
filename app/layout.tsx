@@ -3,6 +3,7 @@ import { Zilla_Slab, Archivo } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { CITIES } from "./content";
 
 // Display = Zilla Slab — a sturdy, low-contrast slab. Reads like stamped
 // lumber / workwear signage: heritage and rugged, but still well-built.
@@ -93,22 +94,7 @@ const jsonLd = {
     addressRegion: "WA",
     addressCountry: "US",
   },
-  areaServed: [
-    "Snohomish",
-    "Woodinville",
-    "Monroe",
-    "Lake Stevens",
-    "Bothell",
-    "Mill Creek",
-    "Kirkland",
-    "Bellevue",
-    "Redmond",
-    "Sammamish",
-    "Issaquah",
-    "Mercer Island",
-    "Kenmore",
-    "Lake Forest Park",
-  ].map((c) => ({ "@type": "City", name: `${c}, WA` })),
+  areaServed: CITIES.map((c) => ({ "@type": "City", name: `${c.name}, WA` })),
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",

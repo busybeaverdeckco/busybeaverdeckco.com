@@ -102,8 +102,12 @@ export default function Footer() {
             <h3 className="eyebrow mt-8 text-cedar">Areas Served</h3>
             <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-bone/60">
               {CITIES.map((c) => (
-                <Link key={c} href="/#areas" className="hover:text-bone">
-                  {c}
+                <Link
+                  key={c.slug}
+                  href={`/deck-builder/${c.slug}`}
+                  className="hover:text-bone"
+                >
+                  {c.name}
                 </Link>
               ))}
             </div>
