@@ -438,6 +438,20 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal delay={120} className="mt-14 flex flex-col items-center gap-4 text-center">
+            <p className="text-evergreen/70">
+              Worked with us? We&apos;d love to hear about it.
+            </p>
+            <a
+              href="https://www.google.com/search?q=Busy+Beaver+Deck+Co.#lrd=0x638c0ad1618fc4e5:0x1f5f707c8d9550e2,3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonVariants({ variant: "flannel", size: "brand" })}
+            >
+              Leave a Review
+            </a>
+          </Reveal>
         </div>
       </section>
 
